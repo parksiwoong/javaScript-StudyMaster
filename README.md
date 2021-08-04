@@ -1,4 +1,4 @@
-# javaScript-StudyMaster
+# 자바스크립트,jQuery 완벽마스터
 
 <H3>참고서</H3>Cancel changes
 
