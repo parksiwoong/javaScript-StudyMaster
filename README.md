@@ -10,4 +10,5 @@
 <H3>참고서_2 </H3></br>
 <h2>jQuery 3.X 버전 </h2>
 
-![XL](https://user-images.githubusercontent.com/66085260/128299933-76462413-2025-4bb4-8452-b613bd7bbaa5.jpg){: width="15px" height="30px"}
+//![XL](https://user-images.githubusercontent.com/66085260/128299933-76462413-2025-4bb4-8452-b613bd7bbaa5.jpg){: width="15px" height="30px"}
+<img src = "https://user-images.githubusercontent.com/66085260/128299933-76462413-2025-4bb4-8452-b613bd7bbaa5.jpgr">
