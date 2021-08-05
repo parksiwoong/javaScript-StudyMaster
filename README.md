@@ -2,7 +2,7 @@
 
 
 직접 따라적고 commit 한 레퍼런스집</br>
-<H3>참고서_1 </H3></br>
+<H3>참고서_1 </H3>
 <h2>jQuery 1.x 2.x 버전 </h2>
 <img src="https://user-images.githubusercontent.com/66085260/124489872-6ca97f80-ddec-11eb-991d-2f227342b254.jpg" width="150px">
 </br></br>
