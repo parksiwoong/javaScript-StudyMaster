@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-------------------------------------------------------->
+<!-- 객체 확장 -->
+<!-- 이 절에 배울 메서드는 $.exstend() -->
+    <script>
+        $(document).ready(function (){
+           var object = {};
+           object.name = 'RintIanTta';
+           object.gender = 'Male';
+           object.part = 'Second Guitar';
+        }); //이렇게 적은 수의 속성을 추가할땐 문제가 없음 하지만 많은 수의 속성을 추가할때 코드가 지저분해지기에
+            //해결하고자 쓰는게 $.extend()메서드임
+    </script>
+
+    <!--
+    $.extend(object, addObject, addObject, ...)
+    $.extend() 메서드의 첫번째 매개변수로 입력한 객체에 두번째 매개변수 이후 객체를 합침
+    -->
+    <!-- $.extend() 메서드 -->
+    <script>
+        $(document).ready(function (){
+           //변수 선언
+            var object = {name:'윤인성'};
+            // $.extend() 메서드 사용
+            $.extend(object,{
+                region: '서울특별시 강서구',
+                part: '세컨드 기타'
+            });
+            //출력
+            var output = '';
+            $.each(object, function (key, item){
+                output += key + ': ' + item + '\n';
+            });
+            alert(output);
+            /*출력하면
+            * name: 윤인성
+            * reglon: 서울특별시 강서구
+            * part: 세컨드 기타
+            * */
+        });
+    </script>
+
+</body>
+</html>

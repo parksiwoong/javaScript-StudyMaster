@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- jQuery 이 외에도 여러가지 자바 스크립트 플러그인을 함꼐 사용할 때는 플러그인 간의 충돌이 발생 할 수 있음
+       Prototype프레임워크에서도 식별자 $를 사용하기때문에 jQuery 프레임워크와 충돌이 발생함 -->
+
+<!--충돌 방지할때 쓰는 메서드는
+    $.noConflict() 메서드
+    $.noConflict() 메서드를 사용하고나면 더 이상 jQuery의 식별자 $를 사용할 수 없음-->
+    <script>
+        $.noCoflict();
+        jQuery(document).ready(function (){ //따라서 식별자 jQuery를 사용해야함
+
+            //간단하게 쓰고싶다면 다른 변수에 저장하여 사용
+            var J = jQuery;
+            J(document).ready(function (){
+                J('h1').removeClass('high-light');
+            });
+        });
+    </script>
+</body>
+</html>

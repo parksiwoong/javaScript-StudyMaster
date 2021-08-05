@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script  src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <title>Title</title>
+</head>
+  <body>
+
+  /** each()와 forEach() 메서드와 차이점
+  * [].forEach(function (item, index){});
+  * $.each(frunction (index, item){});
+  * */
+
+  /* jQuery 배열 관리 */
+  // jQuery의 배열객체는 따로 만드는것이 아니라, 선택자로 여러개의 문서 객체를 선택할때 생성됨
+
+    <script>
+      $(document).ready(function(){
+
+      });
+    </script>
+  <h1>item - 0</h1>
+  <h1>item - 1</h1>
+  <h1>item - 2</h1>
+  <h1>item - 3</h1>
+  <h1>item - 4</h1>
+
+  <!-- 살펴보기전 addClass 와 removeClass() 메서드부터 알아보겠음 (추가/삭제) -->
+
+    <!-- addClass() 메서드-->
+   <script>
+      $(document).ready(function (){
+        $('h1').addClass('high-light');
+      });
+   </script>
+
+    <!-- $(selector).each() 메서드-->
+    <script>
+      $(document).ready(function (){
+        $('h1').each(function (index, item){
+
+        });
+      });
+    </script>
+
+  <!--------------------------------------------------------------------------------------------------------->
+  <!-- 각각 문서 객체에 다른클래스 적용하는 간단한 예제-->
+    <style>
+      .high-light-0 {background: yellow;}
+      .high-light-1 {background: orange;}
+      .high-light-2 {background: blue;}
+      .high-light-3 {background: red;}
+    </style>
+
+  <!-- each() 메서드를 이용한 서로 다른 클래스 적용-->
+    <script>
+      $(document).ready(function (){
+        $('h1').each(function (index, item){
+          $(item).addClass('htgh-light-' + index);
+        });
+      });
+    </script>
+
+  <!-- 위에 item을 사용할 수 도 있지만 this 키워드를 더 많이 사용함 this와 item은 같은 의미로 작용 -->
+    <script>
+      $(document).ready(function (){
+        $('h1').each(function (index, item){
+          $(this).addClass('htgh-light-' + index);
+        });
+      });
+    </script>
+
+  <!-- addClass() 메서드의 특수한 사용 방법 -->
+  <script>
+    $(document).ready(function (){
+      $('h1').each(function (index, item){
+         return 'htgh-light-' + index ; // addClass()  외에도 이런 특성을 가지고 있음
+      });
+    });
+  </script>
+
+
+  </body>
+</html>
