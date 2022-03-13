@@ -12,5 +12,13 @@ var temp_users = [];
 for(var i =0, len = users.length; i < len; i++){
     if(users[i].age < 30){
         temp_users.push(users[i]);
-    };
+    }
 }
+console.log(temp_users.length);
+
+//30살 보다 적은사람들의 나이들 보여주기
+var ages =[];
+for(var i =0, len = temp_users.length; i < len; i++){
+    ages.push(temp_users[i].age);
+}
+console.log(ages);
