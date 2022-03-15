@@ -42,7 +42,6 @@ console.log(ages);
 //30대 이상인 수
 var users_over_30 = filter(users, function(user){return user.age >= 30});
 console.log(users_over_30);
-!!ㅃㅁ케ㅣㅡ12
 
 var names = map(users_over_30, function(user){return user.name;} );
 console.log(names.length);
