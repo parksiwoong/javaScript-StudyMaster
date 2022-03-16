@@ -56,3 +56,34 @@ function findByName(list, name){
 }
 console.log("이름에 맞는 아이가 들어왔니",findByName(users, 'BJ'));
 
+//인자를 하나 더 늘리면 중복을 제거할 수 있다
+
+function findBy(key, list, val){
+    for(var i = 0, len = list.length; i <len; i++){
+        if(list[i][key]===val)return list[i];
+    }
+}
+console.log(findBy('name', users, 'BJ'));
+
+function User(id, name, age){
+    this.getId = function(){
+        return id;
+    };
+    this.getName = function(){
+        return name;
+    }
+    this.getAge = function(){
+        return age;
+    }
+}
+    var users2 = [
+        bnew User(1, "ID" , 32),
+
+    ]
+
+    function findBy(key, list,val){
+    for(var i = 0, len = list.length; i < len; i++){
+        if(list[i][key]===val)return list[i];
+    }
+ }
+ console.log(findBy('age',users2))
