@@ -68,7 +68,7 @@ console.log(findBy('name', users, 'BJ'));
 function User(id, name, age){
     this.getId = function(){
         return id;
-    };
+    }
     this.getName = function(){
         return name;
     }
@@ -88,7 +88,7 @@ function User(id, name, age){
 
     function findBy(key, list,val){
     for(var i = 0, len = list.length; i < len; i++){
-        if(list[i][key]===val)return list[i];
+        if(list[i][key] === val)return list[i];
     }
  }
  console.log(findBy('age',users2))
