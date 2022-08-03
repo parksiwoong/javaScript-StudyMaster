@@ -92,3 +92,20 @@ var f3 = function c(a){
 new function(){
     console.log(1);
 }
+
+//코드 2-26
+var pj = new function(){
+    this.name = 'PJ';
+    this.age = 28;
+    this.constructor.prototype.hi = function(){
+        console.log('hi');
+    }
+}
+
+console.log(pj);
+pj.hi();
+
+//코드 2-27 즉시 실행하며 this 할당하기
+var a = function(a){
+    console.log(this, a);
+},call([1],1)
