@@ -22,3 +22,9 @@ _.map(arr, function(v, i){
     return i * 2;
 });
 console.timeEnd('1'); // 1: 0.5ms ~ 0.7ms
+
+//코드 2-32 eval로 한 번 더 감싼 경우
+console.time('3');
+var arr = Array(10000);
+_.map(arr,eval("L('v, i=> i * 2')")) // eval + new Function
+consol.timeEnd('3'); //3: 0.6ms ~ 0.9ms
