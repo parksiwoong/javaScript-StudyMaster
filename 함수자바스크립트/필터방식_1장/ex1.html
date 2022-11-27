@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function (){
+      $("#btn").click(function(){
+        let v1 = $("#v1").val();
+        let v2 = $("#v2").val();
+        let result = Number(v1) + Number(v2);
+        $("#result").val(result);
+      });
+
+
+      $("#quantity").change(function(){
+        let price = $("#price").val();
+        let count = $(this).val();
+        let total = Number(price) * Number(count);
+        $("#total").text(total);
+      });
+
+      $("#btnTotal").click(function(){
+        let total = 0;
+        $("input:checkbox:checked").each(function (index,item) {
+          total = total + Number(item.value);
+        });
+        $("#totalPrice").text(total);
+      });
+
+    });
+  </script>
+  </head>
+  <body>
+    <h1>1. +연산</h1>
+    <input type="number" id="v1" value="10">+
+    <input type="number" id="v2" value="20">=
+    <input type="text" id="result" value="">
+    <button id="btn">연산</button><br>
+    <br>
+    <br>
+
+    <h1>2. 총합 구하기</h1>
+    가격<input type="text" id="price" value="2500">X 수량
+    <select id="quantity">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+    총합:<span id="total"></span>
+
+    <h1>3. 총합 구하기2 (선택된 값만)</h1>
+    <div>
+      바나나(1000원) <input type="checkbox" name="fruit" class="fruit" value="1000"><br>
+      사과(500원) <input type="checkbox" name="fruit" class="fruit" value="500"><br>
+      배(1500원) <input type="checkbox" name="fruit" class="fruit" value="1500"><br>
+      <button id="btnTotal">총합구하기</button><br>
+      선택한 총가격:<span id="totalPrice"></span>
+    </div>
+  </body>
+</html>
